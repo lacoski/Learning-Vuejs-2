@@ -14,6 +14,12 @@
   </div>
 </template>
 
+<template id="test">
+  <div>
+    <label for="name">JUST TEST 123?</label>
+  </div>
+</template>
+
 <!--template for saying hello-->
 <template id="hello">
   <h1>{{msg}} {{user}}</h1>
@@ -29,6 +35,7 @@
 
 <div id="app">
   <greetings-component></greetings-component>
+  <test-test-component></test-test-component>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
@@ -58,6 +65,15 @@
     data: function () {
       return {
         user: 'hero'
+      }
+    }
+  });
+
+  Vue.component('test-test-component', {
+    template: '#test',
+    data: function () {
+      return {
+        user: 'test'
       }
     }
   });
