@@ -1,6 +1,7 @@
 <template>
   <div class="well">
     <img v-bind:src="catimgsrc" />
+    
   </div>
 </template>
 

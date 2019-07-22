@@ -14,9 +14,16 @@
   </div>
 </template>
 
+<template id="form2">
+  <div>
+    <label for="name">Type the test?</label>
+    <input v-bind:value="value" type="text" id="name" v-on:input="onInput">
+  </div>
+</template>
+
 <template id="test">
   <div>
-    <label for="name">JUST TEST 123?</label>
+    <label for="name">JUST TEST 123? {{test}} {{user}}</label>
   </div>
 </template>
 
@@ -30,18 +37,29 @@
   <div>
     <form-component v-model="user"></form-component>
     <hello-component :user="user"></hello-component>
+
+    <form2-component v-model="user1"></form2-component>
+    <test-test-component :user.once="user1"></test-test-component>
   </div>
 </template>
 
 <div id="app">
   <greetings-component></greetings-component>
-  <test-test-component></test-test-component>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
 <script>
   Vue.component('form-component', {
     template: '#form',
+    props: ['value'],
+    methods: {
+      onInput: function (event) {
+        this.$emit('input', event.target.value)
+      }
+    }
+  });
+  Vue.component('form2-component', {
+    template: '#form2',
     props: ['value'],
     methods: {
       onInput: function (event) {
@@ -64,7 +82,8 @@
     template: '#greetings',
     data: function () {
       return {
-        user: 'hero'
+        user: 'hero',
+        user1: 'hero',
       }
     }
   });
@@ -73,9 +92,10 @@
     template: '#test',
     data: function () {
       return {
-        user: 'test'
+        test: 'test'
       }
-    }
+    },
+    props: ['user']
   });
 
   new Vue({

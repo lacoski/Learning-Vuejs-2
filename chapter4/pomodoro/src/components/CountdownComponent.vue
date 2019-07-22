@@ -1,8 +1,16 @@
-<template lang='jade'>
+<!-- <template lang='jade'>
   .well
     .pomodoro-timer
       span {{ min | leftpad }}:{{ sec | leftpad }}
-</template>
+</template> -->
+
+<template>
+ <div class="well">
+  <div class="pomodoro-timer">
+    <span>{{ min | leftpad }}:{{ sec | leftpad }}</span>
+  </div>
+ </div>
+</template> 
 
 <style scoped>
 </style>
@@ -12,7 +20,7 @@
     data () {
       return {
         min: 1,
-        sec: 5
+        sec: 6
       }
     }
   }

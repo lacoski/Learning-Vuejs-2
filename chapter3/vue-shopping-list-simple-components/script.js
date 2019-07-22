@@ -9,6 +9,22 @@ Vue.component('add-item-component', {
     return {
       newItem: ''
     }
+  },
+  props: ['items'],
+  methods: {
+    addItem: function () {
+      var text;
+      text = this.newItem.trim();
+      console.log(this.newItem)
+      console.log(this.items)
+      if (text) {
+        this.items.push({
+          text: text,
+          checked: false
+        });
+        this.newItem = '';
+      }
+    }
   }
 });
 //item component

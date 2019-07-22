@@ -18,6 +18,9 @@
   .removed {
     color: gray;
   }
+  .removed label {
+    text-decoration: line-through;
+  }
   .removed span {
     text-decoration: line-through;
   }
