@@ -5,12 +5,16 @@ import getters from './getters'
 Vue.use(Vuex)
 
 const state = {
-  msg: 'Hello Vue!'
+  msg: 'Hello Vue!',
+  msg1: 'Test data!'
 }
 
 const mutations = {
   changeMessage(state, msg) {
     state.msg = msg
+  },
+  testMessage(state, msg1) {
+    state.msg1 = msg1
   }
 }
 
