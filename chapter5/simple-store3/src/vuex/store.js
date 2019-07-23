@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import getters from './getters'
 import actions from './actions'
-import { CHANGE_MSG, INCREMENT_COUNTER } from './mutation_types'
+import { CHANGE_MSG, INCREMENT_COUNTER, TEST_MGS } from './mutation_types'
 
 Vue.use(Vuex)
 
@@ -17,6 +17,9 @@ const mutations = {
   },
   [INCREMENT_COUNTER](state) {
     state.counter ++
+  },
+  [TEST_MGS](state) {
+    state.counter = state.counter + 2
   }
 }
 

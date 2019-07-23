@@ -5,7 +5,7 @@
     <items-component :items="items"></items-component>
     <div class="footer">
       <hr />
-      <change-title-component :title="title" v-on:changeTitle="onChangeTitle"></change-title-component>
+      <change-title-component :id="id" :title="title"></change-title-component>
     </div>
   </div>
 </template>
@@ -28,9 +28,6 @@
           text: text,
           checked: false
         })
-      },
-      onChangeTitle (text) {
-        this.$emit('changeTitle', this.id, text)
       }
     }
   }
