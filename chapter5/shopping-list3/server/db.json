@@ -5,7 +5,7 @@
       "items": [
         {
           "text": "Apples",
-          "checked": false
+          "checked": true
         },
         {
           "text": "Oranges",
@@ -31,7 +31,7 @@
         },
         {
           "text": "Bikini",
-          "checked": false
+          "checked": true
         }
       ],
       "id": 12
@@ -67,19 +67,9 @@
       "id": 18
     },
     {
-      "title": "New Shopping List",
+      "title": "TEST",
       "items": [],
       "id": 19
-    },
-    {
-      "title": "New Shopping List",
-      "items": [],
-      "id": 20
-    },
-    {
-      "title": "New Shopping List",
-      "items": [],
-      "id": 21
     }
   ]
 }

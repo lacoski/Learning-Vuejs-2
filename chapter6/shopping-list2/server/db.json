@@ -1,22 +1,17 @@
 {
   "shoppinglists": [
     {
-      "title": "news",
+      "title": "MERDA",
       "items": [
         {
-          "text": "asd",
-          "checked": true
+          "text": "TEST",
+          "checked": false
         },
         {
-          "text": "hkhjkj",
-          "checked": true
+          "text": "TEST",
+          "checked": false
         }
       ],
-      "id": "1"
-    },
-    {
-      "title": "MERDA",
-      "items": [],
       "id": 3
     },
     {
@@ -25,14 +20,9 @@
       "id": 4
     },
     {
-      "title": "New Shopping List",
+      "title": "TEST",
       "items": [],
-      "id": 5
-    },
-    {
-      "title": "New Shopping List",
-      "items": [],
-      "id": 6
+      "id": 7
     }
   ]
 }

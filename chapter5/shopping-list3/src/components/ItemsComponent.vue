@@ -1,6 +1,6 @@
 <template>
   <ul>
-    <item-component v-for="item in items" :item="item"></item-component>
+    <item-component v-for="item in items" :item="item" :id="id"></item-component>
   </ul>
 </template>
 
@@ -11,7 +11,7 @@
     components: {
       ItemComponent
     },
-    props: ['items']
+    props: ['items', 'id']
   }
 </script>
 

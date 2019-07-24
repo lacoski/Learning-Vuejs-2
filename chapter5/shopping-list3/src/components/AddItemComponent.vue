@@ -9,6 +9,7 @@
 
 <script>
   export default {
+    props: ['item', 'id'],
     data () {
       return {
         newItem: ''
@@ -22,6 +23,7 @@
         if (text) {
           this.$emit('add', this.newItem)
           this.newItem = ''
+          this.$store.dispatch('updateList', this.id)
         }
       }
     }
